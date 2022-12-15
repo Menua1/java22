@@ -1,5 +1,7 @@
 import java.io.*;
+
 public class lib {
+    // Считывание строк с файла
     public static String [] ReadLineFromFile(String pathway) throws Exception {
         BufferedReader br = new BufferedReader(new FileReader(pathway));
         String str;
@@ -20,5 +22,12 @@ public class lib {
         return listData;
     
     }   
+    // Печать массива чисел 
+    public static void printArrayInt(int[] arr) {
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.printf("%d, ", arr[i]);
+        }
+        System.out.print(arr[arr.length-1]);
+    }
     
 }
